@@ -9,7 +9,7 @@ I wrote this guide to practice using docker, so I decided to use pyspark in a ju
 ## Setup
 
 1. You may clone this repository or create a specific directory for this guide. Let's call the setup directory as `docker-jupyter-pyspark` for the sake of explanation.
-2. Change directory to `docker-jupyter-pyspark` folder, then create docker file called `Dockerfile`. See [About the Dockerfile](#Dockerfile) section explanation.
+2. Change directory to `docker-jupyter-pyspark` folder, then create docker file called `Dockerfile`. See [About the Dockerfile](#about-the-Dockerfile) section explanation.
 3. Build the docker image using the `Dockerfile` by specfying `docker-jupyter` as image name by using `-t` or `--tag` option, the `.` indicates that the `Dockerfile` is within the current directory.
 
 ```
