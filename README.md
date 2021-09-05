@@ -51,13 +51,13 @@ Check running container using `docker ps -a` command.
 ```
 C:\projects\python\docker-jupyter-pyspark>docker ps -a
 CONTAINER ID   IMAGE            COMMAND       CREATED         STATUS                    PORTS                                       NAMES
-2773aafd477a   docker-jupyter   "/bin/bash"   5 seconds ago   Up 4 seconds              0.0.0.0:8888->8888/tcp, :::8888->8888/tcp   jup-con
+2773aafd477a   docker-jupyter   "/bin/bash"   5 seconds ago   Up 4 seconds              0.0.0.0:8888->8888/tcp, :::8888->8888/tcp   jupyter-container
 ```
 
 5. Access the container using `docker exec` command. The terminal to your container should open after executing below command.
 
 ```
-docker exec -it jup-con /bin/bash
+docker exec -it jupyter-container /bin/bash
 ```
 
 6. To use `pyspark`, we have to install `java`. There reason it is not included `Dockerfile` is that I have not found a way yet to auto answer the prompt during installation such as region setup. within the terminal run below command and respond to the prompts during installation.
@@ -95,19 +95,19 @@ oot@2773aafd477a:/home# jupyter notebook --ip 0.0.0.0 --no-browser --allow-root
 8. To stop the container, use `docker stop` command.
 
 ```
-docker stop jup-con
+docker stop jupyter-container
 ```
 
 9. To restart the container use the `docker start` command.
 
 ```
-docker start jup-con
+docker start jupyter-container
 ```
 
 10. And to access again the running container, use same command from step `5`.
 
 ```
-docker exec -it jup-con /bin/bash
+docker exec -it jupyter-container /bin/bash
 ```
 
 ## About the Dockerfile
